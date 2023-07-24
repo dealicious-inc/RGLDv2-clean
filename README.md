@@ -9,7 +9,7 @@ The dataset was presented in our [CVPR'24 paper](아카이브주소).
 This is the revisiting version of the Google Landmarks dataset (GLDv2), which contains images index.
 The dataset can be used for landmark recognition and retrieval experiments. 
 
-#### Confirming Overlapping Landmarks
+## Confirming Overlapping Landmarks
 
 The criteria for clean datasets published in NC-clean and SfM-120k should not have a common landmark category between the learning set and the evaluation set. 
 Currently, the most commonly used GLDV2-clean dataset for retrieval studies is not.
@@ -29,12 +29,12 @@ NC-clean과 SfM-120k 에서 공개한 clean 데이터셋의 기준은 학습셋�
 
 위 과정을 통해 GLDV2-clean에서 동일한 카테고리 이미지가 존재함을 확인하였다.
 
-#### Verification
+## Verification
 
 1. Extract the local descriptor of top-k using SIFT and try to match it using kd-tree
 2. Remove outerer using RANSAC for matching results
 3. Remove the class information (GID) of the most matched dataset
-4. Check the results of 3 times manually with 3 examinees
+4. Check the results of 3 times manually with 3 inspectors
 
 Additionally, we examined GLDV2-clean, Oxford5k, and Paris6k collected text queries.
 Here, we removed all images contained in the relevant GID for one identical matched query (Hotel des Invalides Paris) regardless of the above steps.

@@ -3,7 +3,7 @@
 
 
 **NEW**: Explore the clean dataset index table
-[here](https://googledrive/deali/gldv2_new_clean). #이거 우리가 공개하면 바꿔야함
+[here](https://drive.google.com/file/d/1AV65-pbcG4EceBVw3dqcjQc5KSZK6kLI/view?usp=share_link). #이거 우리가 공개하면 바꿔야함
 The dataset was presented in our [CVPR'24 paper](아카이브주소).
 
 This is the revisiting version of the Google Landmarks dataset (GLDv2), which contains images index.

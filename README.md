@@ -26,36 +26,39 @@ All data should have no common landmark category between the training set and th
 NC-Clean and SfM-120k do not have a common landmark category between the training set and the evaluation set. 
 However, the most commonly used GLDV2-clean dataset for retrieval studies is not.
 
-![A2](/images/A2.png)
-This figure displays the results. The green box (on the left) represents the outcome when using Oxford5k as a query, while the blue box (on the right) indicates the result with Paris6k. 
-The red box in both sets highlights the query used for input. Each row represents the result of applying ANN indexing to the query using data from GLDv2-clean, NC-clean, and SfM-120k. 
-The columns display the top-5 ranking results. The pink box identifies images with landmarks that match those in the query. 
-Interestingly, none of the results from NC-clean and SfM-120k feature landmarks that resemble the query. 
-In contrast, the results from GLDv2-clean include images with landmarks identical to those in the query. This suggests that using the GLDv2-clean dataset could lead to artificially inflated accuracy scores in testing when compared to NC-clean and SfM-120k. 
-Given the unfairness of this comparison, the validity of previous studies that employed the GLDv2-clean dataset should be reconsidered.
+![02](/images/02.jpg)
+This figure shows the duplicate results of NC-clean and SfM-120k dataset.
+The red box is an Oxford 5k query.
+Each row represents the result of applying ANN indexing to the query using data from NC-clean and SfM-120k.
+The column displays the top five ranking results.
+None of the results from NC-clean and SfM-120k have a similar landmark to the query.
 
 ## Confirming Overlapping Landmarks
 
 We first confirm the existence of a common landmark category between the learning set and the evaluation set.
+
 1. Image feature extraction for learning set GLDV2-clean, NC-clean, SfM-120k and evaluation set Oxford5k, Paris6k
 2. The image feature extracted from GLDV2-clean is indexed using approximate neighbor search (ANN)
 3. Using Oxford5k and Paris6k as queries, search by applying the previously built learning set to ANN indexing (DB)
 
 Through the above process, it was confirmed that the same category image exists in GLDV2-clean.
 
-NC-clean과 SfM-120k 에서 공개한 clean 데이터셋의 기준은 학습셋과 평가셋 사이에 공통 된 landmark카테고리가 없어야한다. 
-현재 retrieval 연구에 가장 많이 사용되는 GLDV2-clean데이터셋은 그렇지 못하다.
-우리는 먼저 학습셋과 평가셋 사이에 공통 된 landmark 카테고리에 대한 존재 유무를 확인한다.
-1. 학습셋 GLDV2-clean, NC-clean, SfM-120k와 평가셋인 Oxford5k, Paris6k에 대한 image feature 추출
-2. GLDV2-clean에서 추출 된 image feature에 대해 approximate nearest neighbor search(ANN)을 이용하여 indexing
-3. Oxford5k, Paris6k를 쿼리로 이용해 앞서 구축한 학습셋에 대해 ANN indexing(DB)에 적용하여 검색
+![A2](/images/A2.png)
+This figure displays the overlapping results. 
+The green box (on the left) represents the outcome when using Oxford5k as a query, while the blue box (on the right) indicates the result with Paris6k. 
+The red box in both sets highlights the query used for input. 
 
-위 과정을 통해 GLDV2-clean에서 동일한 카테고리 이미지가 존재함을 확인하였다.
+Each row represents the result of applying ANN indexing to the query using data from GLDv2-clean, NC-clean, and SfM-120k. 
+The columns display the top-5 ranking results. The pink box identifies images with landmarks that match those in the query. 
+
+Interestingly, none of the results from NC-clean and SfM-120k feature landmarks that resemble the query. 
+In contrast, the results from GLDv2-clean include images with landmarks identical to those in the query. 
+This suggests that using the GLDv2-clean dataset could lead to artificially inflated accuracy scores in testing when compared to NC-clean and SfM-120k. 
 
 ## Verification
 
 1. Extract the local descriptor of top-k using SIFT and try to match it using kd-tree
-2. Remove outerer using RANSAC for matching results
+2. Remove outlier using RANSAC for matching results
 3. Remove the class information (GID) of the most matched dataset
 4. Check the results of 3 times manually with 3 inspectors
 

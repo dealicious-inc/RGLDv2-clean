@@ -26,7 +26,13 @@ All data should have no common landmark category between the training set and th
 NC-Clean and SfM-120k do not have a common landmark category between the training set and the evaluation set. 
 However, the most commonly used GLDV2-clean dataset for retrieval studies is not.
 
-![fig2](/images/A2.png)
+![A2](/images/A2.png)
+This figure displays the results. The green box (on the left) represents the outcome when using Oxford5k as a query, while the blue box (on the right) indicates the result with Paris6k. 
+The red box in both sets highlights the query used for input. Each row represents the result of applying ANN indexing to the query using data from GLDv2-clean, NC-clean, and SfM-120k. 
+The columns display the top-5 ranking results. The pink box identifies images with landmarks that match those in the query. 
+Interestingly, none of the results from NC-clean and SfM-120k feature landmarks that resemble the query. 
+In contrast, the results from GLDv2-clean include images with landmarks identical to those in the query. This suggests that using the GLDv2-clean dataset could lead to artificially inflated accuracy scores in testing when compared to NC-clean and SfM-120k. 
+Given the unfairness of this comparison, the validity of previous studies that employed the GLDv2-clean dataset should be reconsidered.
 
 ## Confirming Overlapping Landmarks
 

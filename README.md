@@ -3,16 +3,33 @@
 
 
 **NEW**: Explore the clean dataset index table
-[here](https://drive.google.com/file/d/1AV65-pbcG4EceBVw3dqcjQc5KSZK6kLI/view?usp=share_link). #이거 우리가 공개하면 바꿔야함
+[here](https://drive.google.com/file/d/1AV65-pbcG4EceBVw3dqcjQc5KSZK6kLI/view?usp=share_link). 
 The dataset was presented in our [CVPR'24 paper](아카이브주소).
 
 This is the revisiting version of the Google Landmarks dataset (GLDv2), which contains images index.
 The dataset can be used for landmark recognition and retrieval experiments. 
 
+## Unfaired Landmark Clean Trainset
+
+### Evaluation sets
+
+A key feature of current landmark datasets in field of ILIR is their fragmented origins: training and evaluation sets are often independently collected and released.
+Evaluation sets such as Oxford 5k and Paris6k, and their more recent versions, Revisited Oxford (ROxford or ROxf) and Paris (RParis or Rpar), are commoly used.
+
+### Training sets
+
+Neural Code(NC), Neural Code clean(NC-clean), SfM-120k, Google Landmarks V1(GLDv1), and Google Landmarks V2(GLDv2 and GLDv2-clean) are widely applied in ILIR.
+Representative clean datasets include NC-clean, SfM-120k, and GLDv2-Clean. They are widely used as regular training sets.
+
+All data should have no common landmark category between the training set and the evaluation set. 
+
+NC-Clean and SfM-120k do not have a common landmark category between the training set and the evaluation set. 
+However, the most commonly used GLDV2-clean dataset for retrieval studies is not.
+
+![GitHub 로고](/images/github-logo.png)
+
 ## Confirming Overlapping Landmarks
 
-The criteria for clean datasets published in NC-clean and SfM-120k should not have a common landmark category between the learning set and the evaluation set. 
-Currently, the most commonly used GLDV2-clean dataset for retrieval studies is not.
 We first confirm the existence of a common landmark category between the learning set and the evaluation set.
 1. Image feature extraction for learning set GLDV2-clean, NC-clean, SfM-120k and evaluation set Oxford5k, Paris6k
 2. The image feature extracted from GLDV2-clean is indexed using approximate neighbor search (ANN)

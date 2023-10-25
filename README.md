@@ -1,4 +1,4 @@
-# Revisiting Google Landmark DataSets V2 Clean (RGLDV2)
+# Revisiting Google Landmark DataSets V2 Clean (RGLDV2-clean)
 ### S2D2R : Single-Stage Pipeline for Detected-to-Retrieval using Revisiting Google Landmark DataSets V2
 
 
@@ -25,16 +25,6 @@ All data should have no common landmark category between the training set and th
 
 NC-Clean and SfM-120k do not have a common landmark category between the training set and the evaluation set. 
 However, the most commonly used GLDV2-clean dataset for retrieval studies is not.
-
-![02](/images/02.jpg)
-![03](/images/03.jpg)
-
-This figures shows the duplicate results of NC-clean and SfM-120k dataset.
-The red boxs are Oxford 5k and Paris6k query.
-
-Each row represents the result of applying ANN indexing to the query using data from NC-clean and SfM-120k.
-The column displays the top-5 ranking results.
-None of the results from NC-clean and SfM-120k have a similar landmark to the query.
 
 ## Confirming Overlapping Landmarks
 

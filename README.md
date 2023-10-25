@@ -3,7 +3,7 @@
 
 
 **NEW**: Explore the clean dataset index table
-[here](https://drive.google.com/file/d/1AV65-pbcG4EceBVw3dqcjQc5KSZK6kLI/view?usp=share_link). 
+[here](https://drive.google.com/file/d/1AV65-pbcG4EceBVw3dqcjQc5KSZK6kLI/view?usp=sharing). 
 The dataset was presented in our [CVPR'24 paper](아카이브주소).
 
 This is the revisiting version of the Google Landmarks dataset (GLDv2), which contains images index.
@@ -27,10 +27,13 @@ NC-Clean and SfM-120k do not have a common landmark category between the trainin
 However, the most commonly used GLDV2-clean dataset for retrieval studies is not.
 
 ![02](/images/02.jpg)
-This figure shows the duplicate results of NC-clean and SfM-120k dataset.
-The red box is an Oxford 5k query.
+![03](/images/03.jpg)
+
+This figures shows the duplicate results of NC-clean and SfM-120k dataset.
+The red boxs are Oxford 5k and Paris6k query.
+
 Each row represents the result of applying ANN indexing to the query using data from NC-clean and SfM-120k.
-The column displays the top five ranking results.
+The column displays the top-5 ranking results.
 None of the results from NC-clean and SfM-120k have a similar landmark to the query.
 
 ## Confirming Overlapping Landmarks
@@ -44,6 +47,7 @@ We first confirm the existence of a common landmark category between the learnin
 Through the above process, it was confirmed that the same category image exists in GLDV2-clean.
 
 ![A2](/images/A2.png)
+
 This figure displays the overlapping results. 
 The green box (on the left) represents the outcome when using Oxford5k as a query, while the blue box (on the right) indicates the result with Paris6k. 
 The red box in both sets highlights the query used for input. 
@@ -65,27 +69,26 @@ This suggests that using the GLDv2-clean dataset could lead to artificially infl
 Additionally, we examined GLDV2-clean, Oxford5k, and Paris6k collected text queries.
 Here, we removed all images contained in the relevant GID for one identical matched query (Hotel des Invalides Paris) regardless of the above steps.
 
-1. SIFT를 사용하여 top-k 의 local descriptor 추출 후 kd-tree를 사용하여 매칭시도
-2. 매칭 결과에 대해 RANSAC를 이용하여o utlier제거
-3. 가장 많이 매칭 된 데이터셋의 클래스 정보 (GID) 제거
-4. 3명의 검수자를 통해 3번의 결과를 수작업으로 확인
+## Cleaning Results
+Through the above two steps, a revised GLDv2-clean dataset, RGLDV2-clean, was generated!
 
-추가적으로 우리는 GLDV2-clean, Oxford5k, Paris6k 수집한 텍스트 쿼리를 검사하였다.
-여기서, 우리는 1개의 동일한 매칭된 쿼리(Hotel des Invalides Paris)에 대해 위의 단계 여부 관계없이, 그 관련 GID에 포함된 모든 이미지들을 제거하였다.
+![T1](/images/table_01.png)
 
+This table presents the statistical values of the filtered data.
+In this table, ROxford and RParis have 36 and 38 overlapping landmarks out of 70, respectively which equates to a duplication rate of approximately 51% and 54%, respectively.
 
-Original Google Landmark DataSets V2 details [here](https://github.com/cvdfoundation/google-landmark.git).
-You can download images annotated with labels representing human-made and natural landmarks. 
+![T2](/images/table_02.png)
+
+This table compares the statistical numbers for the existing clean datasets and the RGLDV2-clean
+Compared to GLDv2-clean, our dataset has reduced Image by 1,565 and Class by 17.
 
 ## Download `index` set
-
+### Original: GLDV2(Google Landmark DataSets V2)
+Original Google Landmark DataSets V2 details [here](https://github.com/cvdfoundation/google-landmark.git).
+You can download images annotated with labels representing human-made and natural landmarks. 
 There are 761,757 images in the `index` set.
-We 
-### Download the list of images and metadata
+    
+### New: RGLDV2(Revisiting Google Landmark DataSets V2 Clean)
+New cleared dataset index table released!
+Our Revisiting Google Landmark DataSets V2 download [here](https://drive.google.com/file/d/1AV65-pbcG4EceBVw3dqcjQc5KSZK6kLI/view?usp=sharing). 
 
-**IMPORTANT**: Note that the integer landmark id's mentioned here are different
-from the ones in the train set above.
-
--   `index_image_to_landmark.csv`: CSV with id,landmark_id fields: `id` is a
-    16-character string, `landmark_id` is an integer. Available at:
-    [`https://s3.amazonaws.com/google-landmark/metadata/index_image_to_landmark.csv`](https://s3.amazonaws.com/google-landmark/metadata/index_image_to_landmark.csv).

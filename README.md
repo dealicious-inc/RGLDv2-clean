@@ -26,7 +26,7 @@ All data should have no common landmark category between the training set and th
 NC-Clean and SfM-120k do not have a common landmark category between the training set and the evaluation set. 
 However, the most commonly used GLDV2-clean dataset for retrieval studies is not.
 
-![GitHub 로고](/images/github-logo.png)
+![fig2](/images/A2.png)
 
 ## Confirming Overlapping Landmarks
 

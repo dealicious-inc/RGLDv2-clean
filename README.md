@@ -85,8 +85,8 @@ Compared to GLDv2-clean, our dataset has reduced Image by 1,565 and Class by 17.
 ## Download `index` set
 ### Original: GLDV2(Google Landmark DataSets V2)
 Original Google Landmark DataSets V2 details [here](https://github.com/cvdfoundation/google-landmark.git).
+
 You can download images annotated with labels representing human-made and natural landmarks. 
-There are 761,757 images in the `index` set.
     
 ### New: RGLDV2(Revisiting Google Landmark DataSets V2 Clean)
 New cleared dataset index table released!

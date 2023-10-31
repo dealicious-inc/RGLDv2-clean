@@ -4,7 +4,8 @@
 
 **NEW**: Explore the clean dataset index table
 [here](https://drive.google.com/file/d/1AV65-pbcG4EceBVw3dqcjQc5KSZK6kLI/view?usp=sharing). 
-The dataset was presented in our [CVPR'24 paper](아카이브주소).
+<!-- The dataset was presented in our [CVPR'24 paper](아카이브주소). -->
+
 
 This is the revisiting version of the Google Landmarks dataset (GLDv2), which contains images index.
 The dataset can be used for landmark recognition and retrieval experiments. 

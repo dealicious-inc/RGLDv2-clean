@@ -71,7 +71,7 @@ Here, we removed all images contained in the relevant GID for one identical matc
 **Through the above two steps, a revised GLDv2-clean dataset, RGLDV2-clean, was generated!**
 
 <p align="center">
-  <img src="/images/table_01.png" width="460" alt="T1">
+  <img src="/images/table_03.png" width="460" alt="T1">
 </p>
 
 This table presents the statistical values of the filtered data.

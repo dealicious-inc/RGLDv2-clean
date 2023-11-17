@@ -1,4 +1,4 @@
-# Revisiting Google Landmark DataSets V2 Clean (RGLDV2-clean)
+# Revisiting Google Landmark DataSets V2 Clean (GLDv2-clean)
 ### S2D2R : Single-Stage Pipeline for Detected-to-Retrieval using Revisiting Google Landmark DataSets V2
 
 
@@ -25,17 +25,17 @@ Representative clean datasets include NC-clean, SfM-120k, and GLDv2-Clean. They 
 **All data should have no common landmark category between the training set and the evaluation set.**
 
 NC-Clean and SfM-120k do not have a common landmark category between the training set and the evaluation set. 
-However, the most commonly used GLDV2-clean dataset for retrieval studies is not.
+However, the most commonly used GLDv2-clean dataset for retrieval studies is not.
 
 ## Confirming Overlapping Landmarks
 
 We first confirm the existence of a common landmark category between the learning set and the evaluation set.
 
-1. Image feature extraction for learning set GLDV2-clean, NC-clean, SfM-120k and evaluation set Oxford5k, Paris6k
-2. The image feature extracted from GLDV2-clean is indexed using approximate neighbor search (ANN)
+1. Image feature extraction for learning set GLDv2-clean, NC-clean, SfM-120k and evaluation set Oxford5k, Paris6k
+2. The image feature extracted from GLDv2-clean is indexed using approximate neighbor search (ANN)
 3. Using Oxford5k and Paris6k as queries, search by applying the previously built learning set to ANN indexing (DB)
 
-Through the above process, **it was confirmed that the same category image exists in GLDV2-clean.**
+Through the above process, **it was confirmed that the same category image exists in GLDv2-clean.**
 
 <p align="center">
   <img src="/images/A2.png" width="900" alt="A2">
@@ -63,12 +63,12 @@ This suggests that using the GLDv2-clean dataset could lead to artificially **in
 3. Remove the class information (GID) of the most matched dataset
 4. Check the results of 3 times manually with 3 inspectors
 
-Additionally, we examined GLDV2-clean, Oxford5k, and Paris6k collected text queries.
+Additionally, we examined GLDv2-clean, Oxford5k, and Paris6k collected text queries.
 
 Here, we removed all images contained in the relevant GID for one identical matched query (Hotel des Invalides Paris) regardless of the above steps.
 
 ## Cleaning Results
-**Through the above two steps, a revised GLDv2-clean dataset, RGLDV2-clean, was generated!**
+**Through the above two steps, a revised GLDv2-clean dataset, RGLDv2-clean, was generated!**
 
 <p align="center">
   <img src="/images/table_01.png" width="460" alt="T1">
@@ -82,17 +82,17 @@ In this table, ROxford and RParis have 36 and 38 overlapping landmarks out of 70
   <img src="/images/table_02.png" width="460" alt="T2">
 </p>
 
-This table compares the statistical numbers for the existing clean datasets and the RGLDV2-clean.
+This table compares the statistical numbers for the existing clean datasets and the RGLDv2-clean.
 
 Compared to GLDv2-clean, our dataset has reduced Image by 1,565 and Class by 17.
 
 ## Download `index` set
-### Original: GLDV2(Google Landmark DataSets V2)
+### Original: GLDv2(Google Landmark DataSets V2)
 Original Google Landmark DataSets V2 details [here](https://github.com/cvdfoundation/google-landmark.git).
 
 You can download images annotated with labels representing human-made and natural landmarks. 
     
-### New: RGLDV2(Revisiting Google Landmark DataSets V2 Clean)
+### New: RGLDv2(Revisiting Google Landmark DataSets V2 Clean)
 New cleared dataset index table released!
 Our Revisiting Google Landmark DataSets V2 download [here](https://drive.google.com/file/d/1AV65-pbcG4EceBVw3dqcjQc5KSZK6kLI/view?usp=sharing). 
 

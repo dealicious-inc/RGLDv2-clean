@@ -1,4 +1,4 @@
-# Revisiting Google Landmark DataSets v2 Clean (GLDv2-clean)
+# Revisiting Google Landmark DataSets v2 Clean (RGLDv2-clean)
 ### On Train-Test Class Overlap and Detection for Image Retrieval
 <!-- ### S2D2R : Single-Stage Pipeline for Detected-to-Retrieval using Revisiting Google Landmark DataSets V2 -->
 

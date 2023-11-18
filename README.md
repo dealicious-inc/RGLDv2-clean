@@ -1,14 +1,18 @@
-# Revisiting Google Landmark DataSets V2 Clean (GLDv2-clean)
-### S2D2R : Single-Stage Pipeline for Detected-to-Retrieval using Revisiting Google Landmark DataSets V2
+# Revisiting Google Landmark DataSets v2 Clean (GLDv2-clean)
+### On Train-Test Class Overlap and Detection for Image Retrieval
+<!-- ### S2D2R : Single-Stage Pipeline for Detected-to-Retrieval using Revisiting Google Landmark DataSets V2 -->
 
+- We revisit Google Landmarks v2 clean, the most popular training set, by identifying and removing class overlap with Revisited Oxford and Paris the most popular training set.
 
-**NEW**: Explore the clean dataset index table
-[here](https://drive.google.com/file/d/1AV65-pbcG4EceBVw3dqcjQc5KSZK6kLI/view?usp=sharing). 
+- We introduce Single-stage Detect-to-Retrieve (CiDeR), an end-to-end, single-stage pipeline to detect objects of interest and extract a global image representation. 
+
+## **NEW**
+
+**Explore the clean dataset index table [here](https://drive.google.com/file/d/1AV65-pbcG4EceBVw3dqcjQc5KSZK6kLI/view?usp=sharing).** 
 <!-- The dataset was presented in our [CVPR'24 paper](아카이브주소). -->
 
-
-This is the revisiting version of the Google Landmarks dataset (GLDv2), which contains images index.
-The dataset can be used for landmark recognition and retrieval experiments. 
+- This is the revisiting version of the Google Landmarks dataset (GLDv2), which contains images index.
+- The dataset can be used for landmark recognition and retrieval experiments. 
 
 ## Unfaired Landmark Clean Trainset
 

@@ -75,7 +75,7 @@ Here, we removed all images contained in the relevant GID for one identical matc
 **Through the above two steps, a revised GLDv2-clean dataset, RGLDv2-clean, was generated!**
 
 <p align="center">
-  <img src="/images/table_01.png" width="460" alt="T1">
+  <img src="/images/Table_01.png" width="460" alt="T1">
 </p>
 
 This table presents the statistical values of the filtered data.
@@ -83,7 +83,7 @@ This table presents the statistical values of the filtered data.
 In this table, ROxford and RParis have 36 and 38 overlapping landmarks out of 70, respectively which equates to a duplication rate of approximately 51% and 54%, respectively.
 
 <p align="center">
-  <img src="/images/table_02.png" width="460" alt="T2">
+  <img src="/images/Table_02.png" width="460" alt="T2">
 </p>
 
 This table compares the statistical numbers for the existing clean datasets and the RGLDv2-clean.

@@ -7,8 +7,8 @@
 - We introduce Single-stage Detect-to-Retrieve (CiDeR), an end-to-end, single-stage pipeline to detect objects of interest and extract a global image representation. 
 
 ## **NEW**
-
-**Explore the clean dataset index table [here](https://drive.google.com/file/d/1AV65-pbcG4EceBVw3dqcjQc5KSZK6kLI/view?usp=sharing).** 
+**Clean data states index table to be released soon!**
+<!-- **Explore the clean dataset index table [here](https://drive.google.com/file/d/1AV65-pbcG4EceBVw3dqcjQc5KSZK6kLI/view?usp=sharing).** -->
 <!-- The dataset was presented in our [CVPR'24 paper](아카이브주소). -->
 
 - This is the revisiting version of the Google Landmarks dataset (GLDv2), which contains images index.
@@ -97,6 +97,7 @@ Original Google Landmark DataSets V2 details [here](https://github.com/cvdfounda
 You can download images annotated with labels representing human-made and natural landmarks. 
     
 ### New: RGLDv2(Revisiting Google Landmark DataSets V2 Clean)
-New cleared dataset index table released!
-Our Revisiting Google Landmark DataSets V2 download [here](https://drive.google.com/file/d/1AV65-pbcG4EceBVw3dqcjQc5KSZK6kLI/view?usp=sharing). 
+A new cleared dataset index table will be released!
+<!-- New cleared dataset index table released!-->
+<!-- Our Revisiting Google Landmark DataSets V2 download [here](https://drive.google.com/file/d/1AV65-pbcG4EceBVw3dqcjQc5KSZK6kLI/view?usp=sharing). -->
 
